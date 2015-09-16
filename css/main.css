@@ -1,1 +1,11 @@
 /* add custom styles */
+
+.form-control {
+  width: 50%;
+  margin: 0 auto;
+}
+
+label {
+  display: block;
+  margin: 0 auto;
+}

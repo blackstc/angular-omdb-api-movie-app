@@ -9,5 +9,4 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
   .otherwise({
     redirectTo: '/'
   });
-
 }]);

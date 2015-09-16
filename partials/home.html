@@ -1,1 +1,24 @@
-<h1>{{ "hello how are you" }}</h1>
+<h1 class="text-center">Angular OMDBI API Search</h1>
+<form>
+  <div class="form-group">
+    <label class="text-center"><h4>Enter a movie by title:</h4></label>
+    <input type="text" class="form-control" ng-model="userInput.search" placeholder="Movie title">
+  </div>
+  <div class="text-center">
+    <button type="submit" class="btn btn-primary" ng-click="search()">Search</button>
+  </div>
+</form>
+
+<hr><br>
+
+<div ng-show="results">
+  <div class="container" ng-repeat="movie in movies" ng-click="showMovie()">
+    <h4>{{ movie.Title }}</h4>
+    <h5>Year: {{ movie.Year}}</h5>
+  </div>
+</div>
+
+<div class="container text-center" ng-hide="results">
+  <h3>{{ movie.Title }}</h3>
+  <img src="{{movie.Poster}}"/>
+</div>
