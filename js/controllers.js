@@ -1,4 +1,4 @@
-app.controller("HomeController", function($scope, $http) {
+app.controller("HomeController", ['$scope', '$http', function($scope, $http) {
   $scope.results = true;
 
   $scope.search = function() {
@@ -20,4 +20,4 @@ app.controller("HomeController", function($scope, $http) {
       $scope.movie = data;
     });
   };
-});
+}]);
